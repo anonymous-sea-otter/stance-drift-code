@@ -1,0 +1,167 @@
+% SDR Summary: rows=models, columns=[SPR, 5 drift patterns = components of SDR (1 - SPR)]; fractions of the transition mass, each row sums to 1. Stage-1: mean over 5 initial stances per (topic, perm). Stage-2: mean (SE) across (topic, perm) samples.
+\begin{tabular}{lcccccc}
+		\\
+		\hline
+		Model & SPR & Polarization & Moderation & Moderation to neutral & Flipping & Deviation from neutrality \\
+		\hline
+		\texttt{GPT-4o-mini} & .570 (.009) & .246 (.011) & .022 (.004) & .009 (.002) & .097 (.012) & .057 (.005) \\
+		\texttt{GPT-4.1} & .686 (.007) & .244 (.005) & .024 (.004) & .001 (.000) & .005 (.001) & .040 (.005) \\
+		\texttt{GPT-5.4} & .593 (.008) & .328 (.006) & .002 (.001) & .000 (.000) & .018 (.004) & .059 (.006) \\
+		\texttt{GPT-3.5-turbo} & .438 (.008) & .158 (.009) & .087 (.006) & .000 (.000) & .180 (.014) & .137 (.005) \\
+		\texttt{gemma-3n-E4B} & .519 (.013) & .165 (.010) & .041 (.006) & .082 (.010) & .178 (.015) & .016 (.004) \\
+		\texttt{Llama-3.3-70B} & .683 (.011) & .191 (.007) & .014 (.003) & .015 (.003) & .069 (.009) & .030 (.005) \\
+		\texttt{Llama-3.1-8B} & .514 (.006) & .174 (.004) & .085 (.004) & .012 (.001) & .103 (.010) & .112 (.003) \\
+		\texttt{Llama-4-Maverick} & .673 (.012) & .122 (.007) & .057 (.006) & .005 (.001) & .078 (.009) & .065 (.006) \\
+		\texttt{Qwen3-A3B} & .545 (.010) & .216 (.011) & .065 (.008) & .001 (.001) & .052 (.009) & .120 (.007) \\
+		\texttt{GPT-4o-mini (reversed)} & .584 (.013) & .227 (.009) & .004 (.001) & .009 (.002) & .120 (.015) & .057 (.006) \\
+		\texttt{GPT-4o-mini (temp0)} & .571 (.009) & .246 (.012) & .022 (.004) & .008 (.002) & .097 (.012) & .057 (.005) \\
+		\texttt{GPT-4o-mini (multiple extraction)} & .569 (.009) & .218 (.009) & .050 (.004) & .011 (.002) & .095 (.011) & .057 (.005) \\
+		\texttt{GPT-4o-mini (in-context)} & .573 (.011) & .271 (.010) & .011 (.003) & .003 (.001) & .088 (.012) & .052 (.006) \\
+		\texttt{GPT-4o-mini (assert)} & .559 (.012) & .196 (.013) & .018 (.004) & .027 (.004) & .169 (.019) & .031 (.004) \\
+		\texttt{GPT-4o-mini (reflection)} & .586 (.010) & .204 (.012) & .032 (.005) & .008 (.002) & .123 (.013) & .047 (.005) \\
+		\texttt{GPT-5.4 (reflection)} & .613 (.009) & .283 (.007) & .002 (.001) & .000 (.000) & .042 (.007) & .060 (.006) \\
+		\texttt{GPT-5.4 (third-person reflection)} & .637 (.011) & .240 (.007) & .003 (.001) & .001 (.000) & .063 (.008) & .056 (.006) \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & .775 (.012) & .119 (.007) & .019 (.003) & .001 (.000) & .008 (.004) & .079 (.007) \\
+		\hline
+\end{tabular}
+
+
+% SDR component: Polarization
+\begin{tabular}{lccccc}
+		\\
+		\hline
+		Model & Agree strongly & Agree & Neutral & Disagree & Disagree strongly \\
+		\hline
+		\texttt{GPT-4o-mini} & --- & .589 (.040) & --- & .642 (.037) & --- \\
+		\texttt{GPT-4.1} & --- & .397 (.031) & --- & .825 (.028) & --- \\
+		\texttt{GPT-5.4} & --- & .777 (.028) & --- & .863 (.023) & --- \\
+		\texttt{GPT-3.5-turbo} & --- & .326 (.035) & --- & .462 (.035) & --- \\
+		\texttt{gemma-3n-E4B} & --- & .234 (.034) & --- & .592 (.041) & --- \\
+		\texttt{Llama-3.3-70B} & --- & .137 (.024) & --- & .817 (.028) & --- \\
+		\texttt{Llama-3.1-8B} & --- & .076 (.007) & --- & .795 (.016) & --- \\
+		\texttt{Llama-4-Maverick} & --- & .288 (.030) & --- & .322 (.038) & --- \\
+		\texttt{Qwen3-A3B} & --- & .526 (.039) & --- & .557 (.042) & --- \\
+		\texttt{GPT-4o-mini (reversed)} & --- & .617 (.041) & --- & .519 (.036) & --- \\
+		\texttt{GPT-4o-mini (temp0)} & --- & .590 (.040) & --- & .638 (.038) & --- \\
+		\texttt{GPT-4o-mini (multiple extraction)} & --- & .498 (.038) & --- & .591 (.026) & --- \\
+		\texttt{GPT-4o-mini (in-context)} & --- & .579 (.039) & --- & .777 (.032) & --- \\
+		\texttt{GPT-4o-mini (assert)} & --- & .557 (.041) & --- & .423 (.038) & --- \\
+		\texttt{GPT-4o-mini (reflection)} & --- & .500 (.041) & --- & .518 (.039) & --- \\
+		\texttt{GPT-5.4 (reflection)} & --- & .573 (.038) & --- & .844 (.024) & --- \\
+		\texttt{GPT-5.4 (third-person reflection)} & --- & .448 (.038) & --- & .754 (.031) & --- \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & --- & .267 (.027) & --- & .327 (.032) & --- \\
+		\hline
+\end{tabular}
+
+
+% SDR component: Moderation
+\begin{tabular}{lccccc}
+		\\
+		\hline
+		Model & Agree strongly & Agree & Neutral & Disagree & Disagree strongly \\
+		\hline
+		\texttt{GPT-4o-mini} & .000 (.000) & --- & --- & --- & .108 (.021) \\
+		\texttt{GPT-4.1} & .038 (.014) & --- & --- & --- & .081 (.013) \\
+		\texttt{GPT-5.4} & .002 (.001) & --- & --- & --- & .008 (.004) \\
+		\texttt{GPT-3.5-turbo} & .294 (.027) & --- & --- & --- & .140 (.021) \\
+		\texttt{gemma-3n-E4B} & .140 (.023) & --- & --- & --- & .063 (.017) \\
+		\texttt{Llama-3.3-70B} & .046 (.015) & --- & --- & --- & .022 (.006) \\
+		\texttt{Llama-3.1-8B} & .379 (.020) & --- & --- & --- & .048 (.005) \\
+		\texttt{Llama-4-Maverick} & .143 (.024) & --- & --- & --- & .144 (.023) \\
+		\texttt{Qwen3-A3B} & .003 (.002) & --- & --- & --- & .322 (.039) \\
+		\texttt{GPT-4o-mini (reversed)} & .007 (.004) & --- & --- & --- & .013 (.006) \\
+		\texttt{GPT-4o-mini (temp0)} & .000 (.000) & --- & --- & --- & .109 (.021) \\
+		\texttt{GPT-4o-mini (multiple extraction)} & .039 (.004) & --- & --- & --- & .209 (.018) \\
+		\texttt{GPT-4o-mini (in-context)} & .000 (.000) & --- & --- & --- & .057 (.013) \\
+		\texttt{GPT-4o-mini (assert)} & .000 (.000) & --- & --- & --- & .088 (.020) \\
+		\texttt{GPT-4o-mini (reflection)} & .000 (.000) & --- & --- & --- & .162 (.027) \\
+		\texttt{GPT-5.4 (reflection)} & .002 (.002) & --- & --- & --- & .006 (.003) \\
+		\texttt{GPT-5.4 (third-person reflection)} & .002 (.001) & --- & --- & --- & .014 (.006) \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & .017 (.007) & --- & --- & --- & .076 (.015) \\
+		\hline
+\end{tabular}
+
+
+% SDR component: Moderation to neutral
+\begin{tabular}{lccccc}
+		\\
+		\hline
+		Model & Agree strongly & Agree & Neutral & Disagree & Disagree strongly \\
+		\hline
+		\texttt{GPT-4o-mini} & .000 (.000) & .039 (.009) & --- & .004 (.002) & .000 (.000) \\
+		\texttt{GPT-4.1} & .000 (.000) & .003 (.001) & --- & .002 (.001) & .000 (.000) \\
+		\texttt{GPT-5.4} & .000 (.000) & .000 (.000) & --- & .000 (.000) & .000 (.000) \\
+		\texttt{GPT-3.5-turbo} & .000 (.000) & .000 (.000) & --- & .001 (.000) & .000 (.000) \\
+		\texttt{gemma-3n-E4B} & .027 (.009) & .315 (.035) & --- & .043 (.014) & .023 (.010) \\
+		\texttt{Llama-3.3-70B} & .000 (.000) & .073 (.013) & --- & .001 (.001) & .000 (.000) \\
+		\texttt{Llama-3.1-8B} & .006 (.001) & .037 (.003) & --- & .011 (.002) & .004 (.001) \\
+		\texttt{Llama-4-Maverick} & .000 (.000) & .004 (.001) & --- & .019 (.007) & .001 (.000) \\
+		\texttt{Qwen3-A3B} & .000 (.000) & .005 (.004) & --- & .000 (.000) & .000 (.000) \\
+		\texttt{GPT-4o-mini (reversed)} & .000 (.000) & .009 (.003) & --- & .034 (.010) & .000 (.000) \\
+		\texttt{GPT-4o-mini (temp0)} & .000 (.000) & .038 (.009) & --- & .004 (.002) & .000 (.000) \\
+		\texttt{GPT-4o-mini (multiple extraction)} & .000 (.000) & .051 (.009) & --- & .004 (.001) & .000 (.000) \\
+		\texttt{GPT-4o-mini (in-context)} & .000 (.000) & .016 (.004) & --- & .001 (.001) & .000 (.000) \\
+		\texttt{GPT-4o-mini (assert)} & .000 (.000) & .117 (.018) & --- & .018 (.005) & .001 (.000) \\
+		\texttt{GPT-4o-mini (reflection)} & .000 (.000) & .028 (.005) & --- & .010 (.005) & .000 (.000) \\
+		\texttt{GPT-5.4 (reflection)} & .000 (.000) & .000 (.000) & --- & .000 (.000) & .000 (.000) \\
+		\texttt{GPT-5.4 (third-person reflection)} & .000 (.000) & .003 (.002) & --- & .000 (.000) & .000 (.000) \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & .003 (.001) & .001 (.000) & --- & .000 (.000) & .002 (.001) \\
+		\hline
+\end{tabular}
+
+
+% SDR component: Flipping
+\begin{tabular}{lccccc}
+		\\
+		\hline
+		Model & Agree strongly & Agree & Neutral & Disagree & Disagree strongly \\
+		\hline
+		\texttt{GPT-4o-mini} & .067 (.021) & .264 (.034) & --- & .045 (.016) & .108 (.027) \\
+		\texttt{GPT-4.1} & .000 (.000) & .002 (.001) & --- & .005 (.002) & .016 (.005) \\
+		\texttt{GPT-5.4} & .002 (.001) & .076 (.018) & --- & .001 (.001) & .011 (.009) \\
+		\texttt{GPT-3.5-turbo} & .085 (.018) & .190 (.028) & --- & .293 (.031) & .332 (.033) \\
+		\texttt{gemma-3n-E4B} & .237 (.035) & .103 (.022) & --- & .251 (.039) & .296 (.040) \\
+		\texttt{Llama-3.3-70B} & .000 (.000) & .286 (.038) & --- & .021 (.010) & .036 (.014) \\
+		\texttt{Llama-3.1-8B} & .247 (.029) & .119 (.012) & --- & .090 (.011) & .061 (.009) \\
+		\texttt{Llama-4-Maverick} & .001 (.000) & .034 (.011) & --- & .018 (.008) & .340 (.042) \\
+		\texttt{Qwen3-A3B} & .058 (.020) & .201 (.034) & --- & .002 (.002) & .000 (.000) \\
+		\texttt{GPT-4o-mini (reversed)} & .162 (.033) & .321 (.040) & --- & .036 (.013) & .079 (.023) \\
+		\texttt{GPT-4o-mini (temp0)} & .067 (.021) & .264 (.034) & --- & .045 (.016) & .108 (.027) \\
+		\texttt{GPT-4o-mini (multiple extraction)} & .058 (.019) & .255 (.033) & --- & .050 (.016) & .111 (.026) \\
+		\texttt{GPT-4o-mini (in-context)} & .078 (.023) & .313 (.038) & --- & .022 (.010) & .029 (.014) \\
+		\texttt{GPT-4o-mini (assert)} & .075 (.020) & .090 (.018) & --- & .324 (.039) & .358 (.041) \\
+		\texttt{GPT-4o-mini (reflection)} & .100 (.026) & .357 (.037) & --- & .039 (.014) & .121 (.028) \\
+		\texttt{GPT-5.4 (reflection)} & .007 (.005) & .192 (.032) & --- & .000 (.000) & .009 (.009) \\
+		\texttt{GPT-5.4 (third-person reflection)} & .019 (.010) & .252 (.035) & --- & .002 (.001) & .040 (.016) \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & .019 (.011) & .010 (.006) & --- & .007 (.003) & .004 (.004) \\
+		\hline
+\end{tabular}
+
+
+% SDR component: Deviation from neutrality
+\begin{tabular}{lccccc}
+		\\
+		\hline
+		Model & Agree strongly & Agree & Neutral & Disagree & Disagree strongly \\
+		\hline
+		\texttt{GPT-4o-mini} & --- & --- & .283 (.026) & --- & --- \\
+		\texttt{GPT-4.1} & --- & --- & .200 (.026) & --- & --- \\
+		\texttt{GPT-5.4} & --- & --- & .297 (.032) & --- & --- \\
+		\texttt{GPT-3.5-turbo} & --- & --- & .687 (.023) & --- & --- \\
+		\texttt{gemma-3n-E4B} & --- & --- & .080 (.019) & --- & --- \\
+		\texttt{Llama-3.3-70B} & --- & --- & .149 (.023) & --- & --- \\
+		\texttt{Llama-3.1-8B} & --- & --- & .558 (.014) & --- & --- \\
+		\texttt{Llama-4-Maverick} & --- & --- & .325 (.032) & --- & --- \\
+		\texttt{Qwen3-A3B} & --- & --- & .598 (.034) & --- & --- \\
+		\texttt{GPT-4o-mini (reversed)} & --- & --- & .283 (.028) & --- & --- \\
+		\texttt{GPT-4o-mini (temp0)} & --- & --- & .284 (.026) & --- & --- \\
+		\texttt{GPT-4o-mini (multiple extraction)} & --- & --- & .287 (.026) & --- & --- \\
+		\texttt{GPT-4o-mini (in-context)} & --- & --- & .261 (.030) & --- & --- \\
+		\texttt{GPT-4o-mini (assert)} & --- & --- & .155 (.020) & --- & --- \\
+		\texttt{GPT-4o-mini (reflection)} & --- & --- & .233 (.024) & --- & --- \\
+		\texttt{GPT-5.4 (reflection)} & --- & --- & .301 (.032) & --- & --- \\
+		\texttt{GPT-5.4 (third-person reflection)} & --- & --- & .279 (.031) & --- & --- \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & --- & --- & .393 (.033) & --- & --- \\
+		\hline
+\end{tabular}
+

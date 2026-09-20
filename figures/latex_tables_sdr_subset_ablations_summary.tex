@@ -1,0 +1,22 @@
+% SDR Summary: rows=models, columns=[SPR, 5 drift patterns = components of SDR (1 - SPR)]; fractions of the transition mass, each row sums to 1. Stage-1: mean over 5 initial stances per (topic, perm). Stage-2: mean (SE) across (topic, perm) samples.
+\begin{tabular}{lcccccc}
+		\\
+		\hline
+		Model & SPR & Polarization & Moderation & Moderation to neutral & Flipping & Deviation from neutrality \\
+		\hline
+		\texttt{GPT-4o-mini} & .570 (.009) & .246 (.011) & .022 (.004) & .009 (.002) & .097 (.012) & .057 (.005) \\
+		\texttt{GPT-4.1} & .686 (.007) & .244 (.005) & .024 (.004) & .001 (.000) & .005 (.001) & .040 (.005) \\
+		\texttt{GPT-5.4} & .593 (.008) & .328 (.006) & .002 (.001) & .000 (.000) & .018 (.004) & .059 (.006) \\
+		\texttt{GPT-3.5-turbo} & .438 (.008) & .158 (.009) & .087 (.006) & .000 (.000) & .180 (.014) & .137 (.005) \\
+		\texttt{gemma-3n-E4B} & .519 (.013) & .165 (.010) & .041 (.006) & .082 (.010) & .178 (.015) & .016 (.004) \\
+		\texttt{Llama-3.3-70B} & .683 (.011) & .191 (.007) & .014 (.003) & .015 (.003) & .069 (.009) & .030 (.005) \\
+		\texttt{Llama-3.1-8B} & .514 (.006) & .174 (.004) & .085 (.004) & .012 (.001) & .103 (.010) & .112 (.003) \\
+		\texttt{Llama-4-Maverick} & .673 (.012) & .122 (.007) & .057 (.006) & .005 (.001) & .078 (.009) & .065 (.006) \\
+		\texttt{Qwen3-A3B} & .545 (.010) & .216 (.011) & .065 (.008) & .001 (.001) & .052 (.009) & .120 (.007) \\
+		\texttt{GPT-4o-mini (reversed)} & .584 (.013) & .227 (.009) & .004 (.001) & .009 (.002) & .120 (.015) & .057 (.006) \\
+		\texttt{GPT-4o-mini (temp0)} & .571 (.009) & .246 (.012) & .022 (.004) & .008 (.002) & .097 (.012) & .057 (.005) \\
+		\texttt{GPT-4o-mini (multiple extraction)} & .569 (.009) & .218 (.009) & .050 (.004) & .011 (.002) & .095 (.011) & .057 (.005) \\
+		\texttt{GPT-4o-mini (in-context)} & .573 (.011) & .271 (.010) & .011 (.003) & .003 (.001) & .088 (.012) & .052 (.006) \\
+		\texttt{GPT-4o-mini (assert)} & .559 (.012) & .196 (.013) & .018 (.004) & .027 (.004) & .169 (.019) & .031 (.004) \\
+		\hline
+\end{tabular}

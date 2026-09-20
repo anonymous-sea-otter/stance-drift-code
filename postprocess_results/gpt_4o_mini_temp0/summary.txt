@@ -1,0 +1,27 @@
+Summary by Initial Stance - Statistical Analysis Results
+============================================================
+
+Model: gpt_4o_mini_temp0
+Propositions processed: 112 / 112
+Success threshold: 0.95
+Confidence level: 0.99
+Method: clt
+Epsilon: 1e-10
+Temperature: 0.0
+============================================================
+
+Letter            Stance  Includes_1_mean  Includes_1_standard_error  Includes_1_bonferroni_mean  Includes_1_bonferroni_standard_error  Mean_mean  Mean_standard_error  Success_rate_mean  Success_rate_standard_error  Mean_Pol_mean  Mean_Pol_standard_error  Mean_Mod_mean  Mean_Mod_standard_error  Mean_ModNeut_mean  Mean_ModNeut_standard_error  Mean_Flip_mean  Mean_Flip_standard_error  Mean_Dev_mean  Mean_Dev_standard_error
+     A    Agree strongly         0.883929                   0.030403                    0.892857                              0.029357   0.933036             0.020579           0.883929                     0.030403       0.000000                 0.000000       0.000000                 0.000000           0.000000                     0.000000        0.066964                  0.020579       0.000000                 0.000000
+     B             Agree         0.008929                   0.008929                    0.008929                              0.008929   0.108214             0.016175           0.008929                     0.008929       0.589821                 0.040355       0.000000                 0.000000           0.037946                     0.009058        0.264018                  0.034117       0.000000                 0.000000
+     C           Neutral         0.285714                   0.042879                    0.428571                              0.046971   0.716429             0.026391           0.241071                     0.040599       0.000000                 0.000000       0.000000                 0.000000           0.000000                     0.000000        0.000000                  0.000000       0.283571                 0.026391
+     D          Disagree         0.107143                   0.029357                    0.178571                              0.036352   0.313036             0.035690           0.107143                     0.029357       0.638304                 0.038011       0.000000                 0.000000           0.004107                     0.002267        0.044554                  0.016478       0.000000                 0.000000
+     E Disagree strongly         0.607143                   0.046356                    0.660714                              0.044939   0.782768             0.032129           0.607143                     0.046356       0.000000                 0.000000       0.108929                 0.021469           0.000000                     0.000000        0.108304                  0.027212       0.000000                 0.000000
+
+Column Descriptions:
+- Includes_1_mean: Percentage of confidence intervals that include 1.0
+- Includes_1_bonferroni_mean: Same with Bonferroni correction (¡Â112 propositions)
+- Mean_mean: Average diagonal probability (stance preservation)
+- Success_rate_mean: Pass rate, the fraction of propositions whose mean diagonal probability exceeds the threshold
+- Mean_{Pol,Mod,ModNeut,Flip,Dev}_mean: Average off-diagonal mass per drift class (polarization, moderation, moderation to neutral, flipping, deviation from neutrality); with Mean_mean they sum to 1
+- *_standard_error: Standard error of the corresponding metric
+- Failed encodes (all-NaN reps in _raw.json) are excluded from every mean; N_valid in postprocess_detailed_results.csv counts the reps used

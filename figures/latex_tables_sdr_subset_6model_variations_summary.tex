@@ -1,0 +1,14 @@
+% SDR Summary: rows=models, columns=[SPR, 5 drift patterns = components of SDR (1 - SPR)]; fractions of the transition mass, each row sums to 1. Stage-1: mean over 5 initial stances per (topic, perm). Stage-2: mean (SE) across (topic, perm) samples.
+\begin{tabular}{lcccccc}
+		\\
+		\hline
+		Model & SPR & Polarization & Moderation & Moderation to neutral & Flipping & Deviation from neutrality \\
+		\hline
+		\texttt{GPT-4o-mini} & .570 (.009) & .246 (.011) & .022 (.004) & .009 (.002) & .097 (.012) & .057 (.005) \\
+		\texttt{GPT-4o-mini (reflection)} & .586 (.010) & .204 (.012) & .032 (.005) & .008 (.002) & .123 (.013) & .047 (.005) \\
+		\texttt{GPT-5.4} & .593 (.008) & .328 (.006) & .002 (.001) & .000 (.000) & .018 (.004) & .059 (.006) \\
+		\texttt{GPT-5.4 (reflection)} & .613 (.009) & .283 (.007) & .002 (.001) & .000 (.000) & .042 (.007) & .060 (.006) \\
+		\texttt{GPT-5.4 (third-person reflection)} & .637 (.011) & .240 (.007) & .003 (.001) & .001 (.000) & .063 (.008) & .056 (.006) \\
+		\texttt{GPT-5.4 (third-person reflection, medium reasoning)} & .775 (.012) & .119 (.007) & .019 (.003) & .001 (.000) & .008 (.004) & .079 (.007) \\
+		\hline
+\end{tabular}
